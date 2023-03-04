@@ -1,0 +1,7 @@
+1) Ecrivez une fonction bash qui retourne le triple d'un nombre demandé
+
+2) Ecrivez une fonction bash qui calcule la longueur d'une chaine de caractère
+
+3) Ecrivez une fonction bash qui compare deux chaines de caractères et affiche la plus longue
+
+2 et 3 combiné
