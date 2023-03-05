@@ -1,6 +1,4 @@
 #!/bin/bash
-set -e
-
 parse_yaml() {
    local prefix=$2
    local s='[[:space:]]*' w='[a-zA-Z0-9_]*' fs=$(echo @|tr @ '\034')
@@ -63,11 +61,11 @@ if [ "$SUPPRIMER_LIGNE" = "O" ] || [ "$SUPPRIMER_LIGNE" = "o" ]
 then
 sed -i $NUM_SUP'd' /home/hington/mesScript/projetMars/tache.JSON
 echo " la tâche $NUM_SUP  a bien été supprimée "
-elif [ "$SUPPRIMER_LIGNE" = "N" ] || [ "SUPPRIMER_LIGNE" = "n" ]
+elif [ "$SUPPRIMER_LIGNE" = "N" ] || [ "$SUPPRIMER_LIGNE" = "n" ]
 then
 fun_Tache
 else
-echo " touche inconnue "
+echo " touche inconnue"
 fi
 ;;
 
@@ -79,7 +77,7 @@ if [ "$SUPPRIMER_LIGNE" = "O" ] || [ "$SUPPRIMER_LIGNE" = "o" ]
 then
 sed -i $NUM_SUP'd;'$NUM_SUP_DEUX'd' /home/hington/mesScript/projetMars/tache.JSON
 echo " les tâches $NUM_SUP et $NUM_SUP_DEUX ont bien été supprimée "
-elif [ "$SUPPRIMER_LIGNE" = "N" ] || [ "SUPPRIMER_LIGNE" = "n" ]
+elif [ "$SUPPRIMER_LIGNE" = "N" ] || [ "$SUPPRIMER_LIGNE" = "n" ]
 then
 fun_Tache
 else
@@ -95,7 +93,7 @@ if [ "$SUPPRIMER_LIGNE" = "O" ] || [ "$SUPPRIMER_LIGNE" = "o" ]
 then
 sed -i $NUM_SUP','$NUM_SUP_DEUX'd' /home/hington/mesScript/projetMars/tache.JSON
 echo " les tâches $NUM_SUP à $NUM_SUP_DEUX ont bien été supprimée "
-elif [ "$SUPPRIMER_LIGNE" = "N" ] || [ "SUPPRIMER_LIGNE" = "n" ]
+elif [ "$SUPPRIMER_LIGNE" = "N" ] || [ "$SUPPRIMER_LIGNE" = "n" ]
 then
 fun_Tache
 else
@@ -105,6 +103,8 @@ fi
 4)
 fun_Tache
 ;;
+*)
+echo "touche inconnue error "
 esac
 #---------------fin case supprime------------------------
 else
@@ -233,6 +233,7 @@ if [ $? -eq 1 ]
 then
 echo "LOGINUSER : $LOGINUSER" >>  /home/hington/mesScript/projetMars/fichierLogin.yml
 echo "MDPUSER : $MDPUSER" >> /home/hington/mesScript/projetMars/fichierLogin.yml
+echo " votre compte a été créer merci de relancer le script "
 else
 echo "Vous avez déjà créer un compte"
 fi
@@ -259,8 +260,4 @@ exit
 ;;
 
 esac
-#------------------------------------------------------------------fin case---------------------------------------------------------
-
-
-#toute commande qui renvoie erreur ou null , sortira du script
-
+#------------------------------------------------------------------fin case-------------------------------------------------------
