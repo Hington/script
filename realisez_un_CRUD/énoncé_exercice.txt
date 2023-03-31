@@ -1,0 +1,14 @@
+Réalisez un CRUD ( Create, Read, Update, Delete ) en bash qui permet 
+de gérer une liste de tâche avec pour boucle principale du script 
+while true; do echo "" echo "Que souhaitez-vous faire ?" 
+echo "1. Afficher la liste des tâches" 
+echo "2. Ajouter une tâche" echo 
+"3. Supprimer une tâche" echo 
+"4. Modifier une tâche" echo 
+"5. Quitter" 
+read choice 
+La boucle principale permet à l'utilisateur de choisir l'action à réaliser en entrant un chiffre correspondant à l'action 
+souhaitée. 
+la liste des tâches doivent être sauvegardé dans un fichier json.. 
+l'accès à l'application se fait par mot de passe et login
+,possibilité de créer un compte si n'existe pas`
